@@ -114,7 +114,10 @@ public abstract class Bag {
             return null;
         }
         else {
-            return this.contents.get(-1);
+            String get = this.contents.get(this.contents.size() - 1);
+            this.contents.remove(get);
+            this.numberOfContents -= 1;
+            return get;
         }
     }
 
